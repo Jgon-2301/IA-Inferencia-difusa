@@ -1,0 +1,3 @@
+IF Temperatura IS Fria AND Humedad IS Seca THEN Riesgo IS Bajo
+IF Temperatura IS Caliente AND Humedad IS Humeda THEN Riesgo IS Alto
+IF Temperatura IS Templada AND Humedad IS Moderada THEN Riesgo IS Medio
