@@ -25,6 +25,14 @@ public class LinguisticVariable {
         return sets;
     }
 
+    public double getMin() {
+        return min;
+    }
+
+    public double getMax() {
+        return max;
+    }
+
     public double getMembership(String setName, double x) {
         for (FuzzySet set : sets) {
             if (set.getName().equalsIgnoreCase(setName)) {

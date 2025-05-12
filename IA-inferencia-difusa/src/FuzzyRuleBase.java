@@ -75,5 +75,10 @@ public class FuzzyRuleBase {
             System.out.println(rule.getRuleText());
         }
     }
+
+    public List<FuzzyRule> getRules() {
+    return rules;
+    }
+
 }
 

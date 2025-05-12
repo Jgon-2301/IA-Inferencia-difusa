@@ -20,4 +20,53 @@ public class FuzzyRule {
                " AND " + antecedent2Var + " IS " + antecedent2Set +
                " THEN " + consequentVar + " IS " + consequentSet;
     }
+
+    public String getAntecedent1Var() {
+    return antecedent1Var;
+}
+
+public void setAntecedent1Var(String antecedent1Var) {
+    this.antecedent1Var = antecedent1Var;
+}
+
+public String getAntecedent1Set() {
+    return antecedent1Set;
+}
+
+public void setAntecedent1Set(String antecedent1Set) {
+    this.antecedent1Set = antecedent1Set;
+}
+
+public String getAntecedent2Var() {
+    return antecedent2Var;
+}
+
+public void setAntecedent2Var(String antecedent2Var) {
+    this.antecedent2Var = antecedent2Var;
+}
+
+public String getAntecedent2Set() {
+    return antecedent2Set;
+}
+
+public void setAntecedent2Set(String antecedent2Set) {
+    this.antecedent2Set = antecedent2Set;
+}
+
+public String getConsequentVar() {
+    return consequentVar;
+}
+
+public void setConsequentVar(String consequentVar) {
+    this.consequentVar = consequentVar;
+}
+
+public String getConsequentSet() {
+    return consequentSet;
+}
+
+public void setConsequentSet(String consequentSet) {
+    this.consequentSet = consequentSet;
+}
+
 }
