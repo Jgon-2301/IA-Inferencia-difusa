@@ -7,18 +7,18 @@ public class Main {
     public static void main(String[] args) {
         try {
             // Cargar variables
-            List<LinguisticVariable> variables = FuzzySystemLoader.loadFromFile("IA-inferencia-difusa\\variables2.txt");
+            List<LinguisticVariable> variables = FuzzySystemLoader.loadFromFile("IA-inferencia-difusa\\variables3.txt");
 
             // Cargar reglas
             FuzzyRuleBase ruleBase = new FuzzyRuleBase(variables);
-            ruleBase.loadRules("IA-inferencia-difusa\\reglas2.txt");
+            ruleBase.loadRules("IA-inferencia-difusa\\reglas3.txt");
             ruleBase.printRules();
 
             // Inputs (puedes probar distintos valores aquí)
             Map<String, Double> inputValues = new HashMap<>();
-            inputValues.put("Temperatura", 45.0);
-            // inputValues.put("Humedad", 72.0);
-            inputValues.put("Carga", 0.5);
+            inputValues.put("Temperatura", 15.0);
+            inputValues.put("Humedad",41.0);
+            //inputValues.put("Carga", 0.5);
 
             // Fuzzificar entradas
             for (LinguisticVariable var : variables) {
@@ -34,7 +34,7 @@ public class Main {
 
             // Ejecutar inferencia
             MamdaniInferenceEngine engine = new MamdaniInferenceEngine(variables, ruleBase.getRules());
-            double result = engine.infer(inputValues, "Velocidad");
+            double result = engine.infer(inputValues, "Riesgo");
 
             // Mostrar resultado
             System.out.println("\nResultado final (riesgo): " + result);

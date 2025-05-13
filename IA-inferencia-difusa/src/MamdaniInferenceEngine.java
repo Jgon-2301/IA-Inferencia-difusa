@@ -1,4 +1,8 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class MamdaniInferenceEngine {
 
@@ -44,6 +48,14 @@ public class MamdaniInferenceEngine {
             aggregated.put(entry.getKey(), Collections.max(entry.getValue()));
         }
 
+        System.out.println("\n--- Conjuntos de salida activados (antes de la desfuzzificación) ---");
+        for (Map.Entry<String, List<Double>> entry : outputMemberships.entrySet()) {
+            String etiqueta = entry.getKey();
+            List<Double> activaciones = entry.getValue();
+            System.out.println("Etiqueta: " + etiqueta + " - Activaciones: " + activaciones + " - Máximo: " + Collections.max(activaciones));
+        }
+
+
         // Desfuzzificación por centroide
         return defuzzify(outputVar, aggregated);
     }
@@ -82,7 +94,7 @@ public class MamdaniInferenceEngine {
         System.out.println("x: " + xfake + " MaxMu: " + max);
 
         double result = denom == 0 ? 0 : num / denom;
-        System.out.println("Resultado crisp = " + result);
+        System.out.println("Resultado = " + result);
         return result;
     }
 
