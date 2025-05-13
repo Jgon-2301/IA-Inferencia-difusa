@@ -11,7 +11,8 @@ public class FuzzySystemLoader {
 
         while ((line = reader.readLine()) != null) {
             line = line.trim();
-            if (line.isEmpty()) continue;
+            if (line.isEmpty())
+                continue;
             String[] parts = line.split("\\s+");
 
             if (parts.length == 3) {
@@ -39,6 +40,15 @@ public class FuzzySystemLoader {
                 }
             }
         }
+        // mostrar variables
+        // Variables de entrada (menos la ultima)
+        System.out.println("\nVariables de entrada:");
+        for (int i = 0; i < variables.size() - 1; i++) {
+            System.out.println(variables.get(i).getName());
+        }
+        // Variables de salida (siempre es la ultima)
+        System.out.println("Variable de salida:");
+        System.out.println(variables.get(variables.size() - 1).getName());
 
         reader.close();
         return variables;

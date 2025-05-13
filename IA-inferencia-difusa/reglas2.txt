@@ -1,0 +1,5 @@
+IF Temperatura IS Baja AND Carga IS Ligera THEN Velocidad IS Lenta
+IF Temperatura IS Alta AND Carga IS Pesada THEN Velocidad IS Rápida
+IF Temperatura IS Media AND Carga IS Moderada THEN Velocidad IS Normal
+IF Temperatura IS Alta AND Carga IS Ligera THEN Velocidad IS Normal
+IF Temperatura IS Baja AND Carga IS Pesada THEN Velocidad IS Normal

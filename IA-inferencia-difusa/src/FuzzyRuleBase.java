@@ -18,7 +18,8 @@ public class FuzzyRuleBase {
         String line;
         while ((line = reader.readLine()) != null) {
             line = line.trim();
-            if (line.isEmpty()) continue;
+            if (line.isEmpty())
+                continue;
 
             // Dividir la línea en tokens, separados por espacios
             String[] segments = line.split("\\s+");
@@ -34,7 +35,6 @@ public class FuzzyRuleBase {
             LinguisticVariable var1 = findVariableByName(a1Var);
             LinguisticVariable var2 = findVariableByName(a2Var);
             LinguisticVariable varC = findVariableByName(cVar);
-            System.out.println("var1: " + var1 + " var2: " + var2 + " varC: " + varC);
 
             // Validar existencia de variables
             if (var1 == null || var2 == null || varC == null) {
@@ -77,8 +77,7 @@ public class FuzzyRuleBase {
     }
 
     public List<FuzzyRule> getRules() {
-    return rules;
+        return rules;
     }
 
 }
-
